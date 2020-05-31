@@ -1,6 +1,9 @@
 class User < ApplicationRecord
 
-  def user_tests_list(level)
-    self.tests.where(level: level)
+  has_many :results
+  has_many :tests, through: :results
+
+  def user_results(level)
+    Test.joins(results: :user).where(level: level)
   end
 end
