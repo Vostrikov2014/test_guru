@@ -5,5 +5,6 @@ class User < ApplicationRecord
 
   def user_results(level)
     Test.joins(results: :user).where(level: level)
+    #tests.where(level: level)
   end
 end
