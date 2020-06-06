@@ -13,7 +13,7 @@ class Test < ApplicationRecord
   scope :normal, -> { where(level: 2..4).order(created_at: :desc) }
   scope :hard, -> { where(level: 5..Float::INFINITY).order(created_at: :desc) }
 
-  scope :category_sort, -> {joins(:category).where(categories: { title: name }).order(title: :desc)}
+  scope :category_sort, -> (name) { joins(:category).where(categories: { title: name }).order(title: :desc) }
   def self.sort_by_category(name)
     #joins(:category).where(categories: { title: name }).order(title: :desc)  #lesson_5
     category_sort(name)
