@@ -3,7 +3,6 @@ class TestsController < ApplicationController
 
   def index
 
-
     #render plain: 'All tests'
 
     #render html: '<h1>All tests</h1>'.html_safe
@@ -22,12 +21,12 @@ class TestsController < ApplicationController
 
     #byebug
 
-    logger.info(self.object_id)
+    #logger.info(self.object_id)
 
-    respond_to do |format|
-      format.html { render plain: 'All tests'}
-      format.json { render json: { tests: Test.All} }
-    end
+    #respond_to do |format|
+    #  format.html { render plain: 'All tests'}
+    #  format.json { render json: { tests: Test.All} }
+    #end
   end
 
   def show
