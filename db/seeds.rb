@@ -15,6 +15,9 @@
 if User.count.zero?
   user = User.create(name: 'Dima')
   user_1 = User.create(name: 'Petay')
+else
+  user = User.find(1)
+  user_1 = User.find(2)
 end
 
 if Category.count.zero?
@@ -28,9 +31,9 @@ else
 end
 
 if Test.count.zero?
-  test = Test.create({ title: 'Сможешь назвать столицы этих 25 стран?', level: 0, category_id: category.id })
-  test_1 = Test.create({ title: 'Литертура - 7 вопросов на которые стыдно не знать ответы', level: 1, category_id: category_1.id })
-  test_2 = Test.create({ title: 'На какого персонажа мультфильмов вы похожи', level: 2, category_id: category_2.id })
+  test = Test.create({ title: 'Сможешь назвать столицы этих 25 стран?', level: 0, category_id: category.id, author_id: user.id })
+  test_1 = Test.create({ title: 'Литертура - 7 вопросов на которые стыдно не знать ответы', level: 1, category_id: category_1.id, author_id: user.id })
+  test_2 = Test.create({ title: 'На какого персонажа мультфильмов вы похожи', level: 2, category_id: category_2.id, author_id: user.id })
 else
   test = Test.find(1)
   test_1 = Test.find(2)
@@ -38,7 +41,7 @@ else
 end
 
 if Question.count.zero?
-  questions_test_1 = Question.create({ body: 'Назовите столицу Объединенных Арабских Эмиратов?', test_id: test.id })
+ questions_test_1 = Question.create({ body: 'Назовите столицу Объединенных Арабских Эмиратов?', test_id: test.id })
   questions_test_2 = Question.create({ body: 'Назовите столицу Германии?', test_id: test.id })
   questions_test_3 = Question.create({ body: 'Рожденный ползать летать не может - кто автор этих строк?', test_id: test_1.id })
   questions_test_4 = Question.create({ body: 'Как звали отца татьяны лариной в романе А.С.Пушкина Евгений Онегин?', test_id: test_1.id })
