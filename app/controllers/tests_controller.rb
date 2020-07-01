@@ -1,6 +1,7 @@
 class TestsController < ApplicationController
-  #protect_from_forgery with: :exception
-  before_action :test_find, only: [:show, :edit, :destroy]
+
+  before_action :set_test, only: %i[show edit destroy start update]
+  before_action :set_user, only: :start
 
   def index
     @tests = Test.all
@@ -25,8 +26,6 @@ class TestsController < ApplicationController
   end
 
   def update
-    @test = Test.find(params[:id])
-
     if @test.update(test_params)
       redirect_to @test
     else
@@ -40,46 +39,20 @@ class TestsController < ApplicationController
   end
 
   def start
-    render plain: 'Start certain test'
+    @user.tests.push(@test)
+    redirect_to @user.test_passage(@test)
   end
 
-
   private
-
-  def test_find
+  def set_test
     @test = Test.find(params[:id])
+  end
+
+  def set_user
+    @user = User.first
   end
 
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :author_id, :description)
   end
 end
-
-
-
-
-
-#render plain: 'All tests'
-
-#render html: '<h1>All tests</h1>'.html_safe
-
-#render json: { tests: [] }
-
-#render json: { tests: Test.all }
-
-#render inline: '<p>My favourite language is: <%= %[ybuR].reverse! %>!</p>'
-
-#render file: 'public/hello', layout: false
-
-#head 204
-
-#head :no_content
-
-#byebug
-
-#logger.info(self.object_id)
-
-#respond_to do |format|
-#  format.html { render plain: 'All tests'}
-#  format.json { render json: { tests: Test.All} }
-#end

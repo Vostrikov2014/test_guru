@@ -1,10 +1,10 @@
 class Test < ApplicationRecord
 
-  belongs_to :category
+  has_many :test_passages
+  has_many :users, through: :test_passages
   has_many :questions
-  has_many :results
-  has_many :users, through: :results
-  belongs_to :author, class_name: 'User'
+  belongs_to :category, optional: true
+  belongs_to :author, class_name: 'User', foreign_key: :id, optional: true
 
   validates :title, presence: true, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
@@ -15,7 +15,6 @@ class Test < ApplicationRecord
 
   scope :category_sort, -> (name) { joins(:category).where(categories: { title: name }) }
   def self.sort_by_category(name)
-    #joins(:category).where(categories: { title: name }).order(title: :desc)  #lesson_5
     category_sort(name).order(title: :desc).pluck(:title)
   end
 end
