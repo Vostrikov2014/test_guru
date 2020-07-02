@@ -13,10 +13,10 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
 
     if @answer.save
-      redirect_to @answer, notice: 'Answer was successfully created'
+      redirect_to @answer, notice: 'Ответ создан'
     else
       render :new
     end
