@@ -1,10 +1,16 @@
-<h1><%= @question.body %></h1>
-<% @question.answers.each do |answer| %>
-  <p><%= answer.body %>
-<% end %>
+<h3>Test: <%= @question.test.title %></h3>
+
+<h2>Question: <%= @question.body %></h2>
+
+<h2>Answers</h2>
+<%= link_to 'Новый ответ', new_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
 
 <p>
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Delete', question_path(@question), method: :delete, data: {confirm: "Are you sure?" } %> |
-<%= link_to 'Back', test_path(@question.test) %>
+<%= link_to 'Редактировать', edit_question_path(@question) %> |
+<%= link_to 'Удалить', question_path(@question), method: :delete, data: {confirm: "Вы согласны?" } %> |
+<%= link_to 'Назад', test_path(@question.test) %>
 </p>
