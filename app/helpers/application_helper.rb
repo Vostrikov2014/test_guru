@@ -7,4 +7,13 @@ module ApplicationHelper
   def github_url(author, repo)
     link_to("Github: Учебное web-приложение - создание, редактирование и прохождение тестов", "https://github.com/#{author}/#{repo}", target: :_blank)
   end
+
+  def flash_message(flash)
+    html = ''
+    flash.each do |key, value|
+      html << content_tag(:p, value, class: "flash #{key}")
+    end
+    html.html_safe
+  end
+
 end
