@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestGuru</title>
+    <title>Test guru</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,17 +11,16 @@
 
   <body>
 
-    <h1><%= link_to 'Тест Гуру', tests_path %></h1>
+    <h1><%= link_to 'Test guru', tests_path %></h1>
 
-    <% if logged_in? %>
+    <% if user_signed_in? %>
       <p class="nav user">
-        Привет! <b><%= current_user.email %></b> | <%= link_to 'Выйти', logout_path %>
-      </p>
-    <% else %>
-      <p class="nav user">
-        <%= link_to 'Войти', login_path %> | <%= link_to 'Зарегистрироваться', signup_path %>
+        Welcome! <b><%= current_user.email %></b> |
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
       </p>
     <% end %>
+
+    <%= render 'shared/flash' %>
 
     <%= yield %>
     <%= render 'layouts/footer' %>

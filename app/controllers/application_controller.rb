@@ -1,25 +1,15 @@
 class ApplicationController < ActionController::Base
+
   protect_from_forgery with: :exception
-
-  helper_method :current_user, :logged_in?
-
   before_action :authenticate_user!
 
-  private
-
-  def authenticate_user!
-    unless current_user
-      cookies[:previous_page] = request.url
-      redirect_to login_path, alert: 'Вы зарегистрированы на Тест гуру? Введите email и Password'
+  def after_sign_in_path_for(resource)
+    flash[:notice] = "Hello! #{resource.first_name}"
+    if resource.is_a?(Admin)
+      admin_tests_path
+    else
+      super
     end
-  end
-
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
-  end
-
-  def logged_in?
-    current_user.present?
   end
 
 end
