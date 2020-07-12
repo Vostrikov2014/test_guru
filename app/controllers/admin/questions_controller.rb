@@ -5,7 +5,6 @@ class Admin::QuestionsController < Admin::BaseController
 
   def index
     @questions = @test.questions.all
-    render inline: "<h2>Question the test: <%= @test.title %></h2><% @questions.each do |q| %><p><%= q.body %></p><%end%>"
   end
 
   def show
