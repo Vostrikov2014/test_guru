@@ -31,3 +31,91 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    select:
+      prompt: "Select:"
+
+  test_passages:
+    result:
+      header: "The %{title} Test was Completed!"
+      back_to: "Back to tests"
+    show:
+      header: "Test: %{title}"
+      question: "Question: %{number}"
+      next: "Next"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      count: "Count"
+      question: "Question"
+      actions: "Actions"
+      description: "Description:"
+    test:
+      start: "Start"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tricky Tests"
+        new_test: "Create new test"
+        title: "Title"
+        level: "Level"
+        count: "Count"
+        question: "Question"
+        actions: "Actions"
+        description: "Description:"
+      new:
+        header: "Create new test"
+        back: "Back"
+        description: "Description:"
+      show:
+        header: "Test: "
+        level: "Level"
+        description: "Description:"
+        question: "Question"
+        new_question: "New question"
+        edit: "Edit"
+        delete: "Delete"
+        sure?: "Are you sure?"
+        back: "Back"
+      edit:
+        edit_test: "Edit test: "
+        back: "Back"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure?: "Are you sure?"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+  layouts:
+    application:
+      log_in: "Log in"
+      log_out: "Log out"
+      sign_up: "Sign up"
+    link_to_tests:
+      back: "Back"

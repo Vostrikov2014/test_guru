@@ -1,0 +1,92 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Выберите:"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+      back_to: "Вернуться к тестам"
+    show:
+      header: "Тест: %{title}"
+      question: "Вопрос: %{number}"
+      next: "Далее"
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      count: "Количество"
+      questions: "Вопросов"
+      actions: "Действия"
+      description: "Описание:"
+    test:
+      start: "Начать"
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан."
+      index:
+        header: "Доступные Тесты"
+        new_test: "Создать новый тест"
+        title: "Название"
+        level: "Уровень"
+        count: "Количество"
+        questions: "Вопросов"
+        actions: "Действия"
+        description: "Описание:"
+      new:
+        header: "Создать новый тест"
+        back: "Назад"
+        description: "Описание:"
+      show:
+        header: "Тест: "
+        level: "Уровень"
+        description: "Описание:"
+        question: "Вопрос"
+        new_question: "Новый вопрос"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure?: "Вы уверены?"
+        back: "Назад"
+      edit:
+        edit_test: "Изменить тест: "
+        back: "Назад"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure?: "Вы уверены?"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  layouts:
+    application:
+      log_in: "Войти"
+      log_out: "Выйти"
+      sign_up: "Зарегистрироваться"
+    link_to_tests:
+      back: "Назад"

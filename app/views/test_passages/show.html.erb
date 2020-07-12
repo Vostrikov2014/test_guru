@@ -1,7 +1,7 @@
-<h1>Тест: <%= @test_passage.test.title %></h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p>
-  Вопрос <%= @test_passage.question_number %> из <%= @test_passage.test.questions.count %>
+  <%= t('.question', number: @test_passage.question_number) %> / <%= @test_passage.test.questions.count %>
 </p>
 
 <b>
@@ -16,5 +16,5 @@
     </p>
   <% end %>
 
-  <p><%= form.submit 'Следующий' %></p>
+  <p><%= form.submit t('.next') %></p>
 <% end %>
