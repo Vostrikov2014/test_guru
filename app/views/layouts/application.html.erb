@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Test guru</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <!-- Required meta tags -->
+  <!-- Кодировка шрифтов -->
+  <meta charset="utf-8">
+  <!-- Метатег "viewport" - для отображения на мобильном устройстве -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <title>Test guru</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <h1><%= link_to 'Test guru', tests_path %></h1>
+<body>
+<%= render 'shared/nav' %>
 
-    <% if user_signed_in? %>
-      <p class="nav user">
-        Welcome! <b><%= current_user.email %></b> |
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-      </p>
-    <% end %>
+<div class="container">
+  <%= render 'shared/flash' %>
+  <%= yield %>
+</div>
 
-    <%= render 'shared/flash' %>
-
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-  </body>
+<%= render 'layouts/footer' %>
+</body>
 
 </html>

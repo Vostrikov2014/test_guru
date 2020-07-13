@@ -52,6 +52,7 @@ ru:
         header: "Создать новый тест"
         back: "Назад"
         description: "Описание:"
+        remember: "Запомнить"
       show:
         header: "Тест: "
         level: "Уровень"
