@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
 module TestGuru
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -15,6 +17,11 @@ module TestGuru
 
     # Установка локали поумодчанию
     config.i18n.default_locale = :ru
+
+    # config.autoload_paths -- массив в который содержит все пути который Раилс учитывет
+    # при автоматическом поиске и загрузки констант.
+    # И добавим строку к каталогу внутри которого мы хотим определить файл
+    config.autoload_paths << "#{Rails.root}/lib/clients"
 
     # Settings `in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

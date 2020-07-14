@@ -53,6 +53,9 @@ en:
       header: "Test: %{title}"
       question: "Question: %{number}"
       next: "Next"
+    gist:
+      success: "Gist saved successfully!"
+      failure: "An error occurred while saving the gist"
 
   tests:
     index:
@@ -102,6 +105,13 @@ en:
         edit: "Edit"
         delete: "Delete"
         sure?: "Are you sure?"
+      gists:
+        index:
+          header: "Questions list"
+          question: "Question"
+          gist_url: "Link"
+          user: "User"
+          back: "Back"
 
   shared:
     errors:
@@ -120,3 +130,5 @@ en:
       sign_up: "Sign up"
     link_to_tests:
       back: "Back"
+
+  description: "Question %{title} from TestGuru"
