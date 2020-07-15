@@ -11,7 +11,7 @@ class GistQuestionService
   end
 
   def success?
-    self.created_at.present?
+    @client.last_response.status == 200 || 201
   end
 
   private
