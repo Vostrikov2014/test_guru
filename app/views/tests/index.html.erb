@@ -9,9 +9,13 @@
           header:-->
 <h1 class="mb-4 mt-4 text-center"><%= t('.header') %></h1>
 
-<table>
+<table class="table">
   <tr>
-    <th><%= t('.title') %></th>
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
     <th><%= t('.level') %></th>
     <th><%= t('.count') %></th>
     <th><%= t('.actions') %></th>
