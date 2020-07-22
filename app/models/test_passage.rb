@@ -34,6 +34,9 @@ class TestPassage < ApplicationRecord
     questions_count - remained_questions.count
   end
 
+  def progress
+    (question_number - 1) * 100 / questions_count
+  end
 
   private
 
