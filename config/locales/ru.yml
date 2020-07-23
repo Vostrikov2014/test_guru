@@ -74,6 +74,8 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         sure?: "Вы уверены?"
+      form_inline:
+        submit: "Да"
       gists:
         index:
           header: "Список вопросов"

@@ -3,6 +3,8 @@
 
     <h1 class="mb-4 mt-4"><%= t('.header') %></h1>
 
+    <%= render 'shared/errors', resources: @test %>
+
     <p>
     <h3><%= link_to t('.new_test'), new_admin_test_path %></h3>
     </p>
