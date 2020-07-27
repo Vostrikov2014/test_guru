@@ -12,13 +12,15 @@
 #Category.delete_all
 #User.delete_all
 
-if User.count.zero?
-  user = User.create(name: 'Dima')
-  user_1 = User.create(name: 'Petay')
-else
-  user = User.find(1)
-  user_1 = User.find(2)
-end
+#if User.count.zero?
+#  user = User.create(name: 'Dima')
+#  user_1 = User.create(name: 'Petay')
+#else
+#  user = User.find(1)
+#  user_1 = User.find(2)
+#end
+
+# !!! ВАЖНО перед началом заполнения (rails db:seed) зарегистрируйте пользователя
 
 if Category.count.zero?
   category = Category.create({ title: 'Тесты для ума' })
@@ -31,9 +33,9 @@ else
 end
 
 if Test.count.zero?
-  test = Test.create({ title: 'Сможешь назвать столицы этих 25 стран?', level: 0, category_id: category.id, author_id: user.id })
-  test_1 = Test.create({ title: 'Литертура - 7 вопросов на которые стыдно не знать ответы', level: 1, category_id: category_1.id, author_id: user.id })
-  test_2 = Test.create({ title: 'На какого персонажа мультфильмов вы похожи', level: 2, category_id: category_2.id, author_id: user.id })
+  test = Test.create({ title: 'Сможешь назвать столицы этих 25 стран?', level: 0, category_id: category.id, author_id: 1 })
+  test_1 = Test.create({ title: 'Литертура - 7 вопросов на которые стыдно не знать ответы', level: 1, category_id: category_1.id, author_id: 1 })
+  test_2 = Test.create({ title: 'На какого персонажа мультфильмов вы похожи', level: 2, category_id: category_2.id, author_id: 1 })
 else
   test = Test.find(1)
   test_1 = Test.find(2)
