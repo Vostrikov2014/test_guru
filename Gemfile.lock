@@ -273,7 +273,7 @@ DEPENDENCIES
   bootstrap (~> 4.5.0)
   byebug
   capybara (>= 2.15)
-  devise (~> 4.0)
+  devise
   dotenv-rails
   faraday
   jbuilder (~> 2.7)
@@ -285,7 +285,7 @@ DEPENDENCIES
   pg
   puma (~> 4.1)
   rails (~> 6.0.3)
-  rails-i18n (~> 6.0.0)
+  rails-i18n
   rubocop (~> 0.88.0)
   rubocop-rspec
   sass-rails (>= 6)
