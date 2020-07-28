@@ -35,7 +35,7 @@ gem 'devise'
 # NETWORKING
 gem 'faraday'
 gem 'octokit'
-gem 'dotenv-rails'
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
 
 # LOCALIZATION
 gem 'rails-i18n'
