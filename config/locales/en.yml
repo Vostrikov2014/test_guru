@@ -130,7 +130,17 @@ en:
       log_in: "Log in"
       log_out: "Log out"
       sign_up: "Sign up"
+      feedback: 'Feedback'
     link_to_tests:
       back: "Back"
+
+  feedbacks:
+    new:
+      header: "Enter your message:"
+      go_back: 'Go back to the tests'
+      submit: 'Send'
+    create:
+      success: "Message was successfully sent."
+      error: "Something went wrong. Please try again."
 
   description: "Question %{title} from TestGuru"
