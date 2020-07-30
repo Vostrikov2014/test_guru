@@ -1,0 +1,8 @@
+<div class="form-group">
+  <%= form_with url: feedback_index_path, local: true do |form| %>
+    <%= form.label :feedback %>
+    <br>
+    <%= form.text_area :body, rows: 7, class: 'form-control' %>
+    <%= form.submit class: 'btn btn-primary mt-4' %>
+  <% end %>
+</div>
