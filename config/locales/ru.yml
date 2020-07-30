@@ -105,4 +105,13 @@ ru:
     link_to_tests:
       back: "Назад"
 
+  feedbacks:
+    new:
+      header: "Enter your message:"
+      go_back: 'Go back to the tests'
+      submit: 'Send'
+    create:
+      success: "Message was successfully sent."
+      error: "Something went wrong. Please try again."
+
   description: "Вопрос %{title} от TestGuru"
