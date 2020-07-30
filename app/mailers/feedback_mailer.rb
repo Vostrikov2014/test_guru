@@ -1,4 +1,5 @@
-class FeedBackMailer < ApplicationMailer
+class FeedbackMailer < ApplicationMailer
+
   def feedback(user, message)
     @user = user
     @message = message

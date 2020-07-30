@@ -101,6 +101,7 @@ ru:
       log_in: "Войти"
       log_out: "Выйти"
       sign_up: "Зарегистрироваться"
+      feedback: 'Отправить отзыв'
     link_to_tests:
       back: "Назад"
 
