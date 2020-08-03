@@ -4,7 +4,6 @@ class GistQuestionService
     @question = question
     @test = @question.test
     @client = client || Octokit::Client.new(access_token: ENV['ACCESS_TOKEN'])
-    #@client = client || Octokit::Client.new(access_token: 'd07b633b4a0141b47a30b6a48a4897dc0fde10dc')
   end
 
   def call
