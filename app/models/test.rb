@@ -17,4 +17,7 @@ class Test < ApplicationRecord
   def self.sort_by_category(name)
     category_sort(name).order(title: :desc).pluck(:title)
   end
+
+  scope :with_questions, -> { joins(:questions).group('tests.id') }
+
 end
