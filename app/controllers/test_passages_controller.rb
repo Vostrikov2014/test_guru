@@ -7,7 +7,6 @@ class TestPassagesController < ApplicationController
   def result; end
 
   def gist
-
     connection = GistQuestionService.new(@test_passage.current_question)
     result = connection.call
 
