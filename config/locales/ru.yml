@@ -33,6 +33,7 @@ ru:
       questions: "Вопросов"
       actions: "Действия"
       description: "Описание:"
+      badges: "Награды"
     test:
       start: "Начать"
 
@@ -49,6 +50,7 @@ ru:
         questions: "Вопросов"
         actions: "Действия"
         description: "Описание:"
+        badges: "Награды"
       new:
         header: "Создать новый тест"
         back: "Назад"
@@ -81,6 +83,33 @@ ru:
           gist_url: "Ссылка"
           user: "Пользователь"
           back: "Назад"
+    badges:
+      index:
+        all_badges: "Все награды"
+        yore_badges: "Ваши награды"
+        title: "Наименование"
+        description: "Описание"
+        image: "Изображение"
+        rule: "Правила"
+        value: "Значение"
+      badge:
+        show: "Просмотр"
+        edit: "Редактировать"
+        delete: "Удалить"
+        are_you_sure: "Вы уверены?"
+      edit:
+        edit_badge: "Редактировать награды"
+        back: "Назад"
+      new:
+        new_badge: "Создать новюу награду"
+        back: "Назад"
+      show:
+        title: "Наименование"
+        description: "Описание"
+        image: "Изображение"
+        rule: "Правила"
+        value: "Значение"
+        back: "Назад"
 
   shared:
     errors:
@@ -113,3 +142,8 @@ ru:
       error: "Something went wrong. Please try again."
 
   description: "Вопрос %{title} от TestGuru"
+
+  badges:
+    index:
+      all_badges: "Все награды"
+      your_badges: "Ваши награды"

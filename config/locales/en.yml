@@ -64,6 +64,7 @@ en:
       question: "Question"
       actions: "Actions"
       description: "Description:"
+      badges: "Badges"
     test:
       start: "Start"
 
@@ -80,6 +81,7 @@ en:
         question: "Question"
         actions: "Actions"
         description: "Description:"
+        badges: "Badges"
       new:
         header: "Create new test"
         back: "Back"
@@ -112,6 +114,33 @@ en:
           gist_url: "Link"
           user: "User"
           back: "Back"
+    badges:
+      index:
+        all_badges: "All badges"
+        yore_badges: "Your badges"
+        title: "Title"
+        description: "Description"
+        image: "Image"
+        rule: "Rule"
+        value: "Value"
+      badge:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure?"
+      edit:
+        edit_badge: "Edit badge"
+        back: "Back"
+      new:
+        new_badge: "Create new badge"
+        back: "Back"
+      show:
+        title: "Title"
+        description: "Description"
+        image: "Image"
+        rule: "Rule"
+        value: "Value"
+        back: "Back"
 
   shared:
     errors:
@@ -142,3 +171,8 @@ en:
       error: "Something went wrong. Please try again."
 
   description: "Question %{title} from TestGuru"
+
+  badges:
+    index:
+      all_badges: "All badges"
+      yore_badges: "Your badges"
