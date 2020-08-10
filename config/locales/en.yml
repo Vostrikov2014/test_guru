@@ -44,6 +44,8 @@ en:
       prompt: "Select:"
 
   test_passages:
+    update:
+      timeover: "Time is over!"
     result:
       header: "The %{title} Test was Completed!"
       back_to: "Back to tests"
@@ -51,6 +53,7 @@ en:
       header: "Test: %{title}"
       question: "Question: %{number}"
       next: "Next"
+      time: "Time left >>"
     gist:
       success: "Gist saved successfully!"
       failure: "An error occurred while saving the gist"
@@ -82,6 +85,7 @@ en:
         actions: "Actions"
         description: "Description:"
         badges: "Badges"
+        timer: "Test time, min."
       new:
         header: "Create new test"
         back: "Back"

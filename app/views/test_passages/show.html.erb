@@ -1,12 +1,19 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<p>
-  <%= t('.question', number: @test_passage.question_number) %> / <%= @test_passage.test.questions.count %>
-</p>
 
+<%= t('.question', number: @test_passage.question_number) %> / <%= @test_passage.test.questions.count %>
 <%= content_tag :div,'', class: 'progress', data: { test_progress: @test_passage.progress } do %>
   <div class="progress-bar" role="progressbar" style="width: 0%"></div>
 <% end %>
+
+<p></p>
+
+<p>
+  <% if @test_passage.test.timer.present? %>
+    <%= t('.time') %>
+    <%= content_tag :span, '', class: 'timer', data: {time_stop: @test_passage.time_stop, test_passage_id: @test_passage.id} %>
+  <% end %>
+</p>
 
 <p>
   <b><%= @test_passage.current_question.body %></b>
