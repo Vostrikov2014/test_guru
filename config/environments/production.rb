@@ -106,7 +106,7 @@ Rails.application.configure do
   # to send a subsequent read to the primary.
   #
   # The `database_resolver` class is used by the middleware to determine which
-  # database is appropriate to use based on the time delay.
+  # database is appropriate to use based on the timer delay.
   #
   # The `database_resolver_context` class is used by the middleware to set
   # timestamps for the last write to the primary. The resolver uses the context

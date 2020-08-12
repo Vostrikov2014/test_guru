@@ -106,8 +106,8 @@ Devise.setup do |config|
   # config.clean_up_csrf_token_on_authentication = true
 
   # When false, Devise will not attempt to reload routes on eager load.
-  # This can reduce the time taken to boot the app but if your application
-  # requires the Devise mappings to be loaded during boot time the application
+  # This can reduce the timer taken to boot the app but if your application
+  # requires the Devise mappings to be loaded during boot timer the application
   # won't boot properly.
   # config.reload_routes = true
 
@@ -163,7 +163,7 @@ Devise.setup do |config|
   # config.confirmation_keys = [:email]
 
   # ==> Configuration for :rememberable
-  # The time the user will be remembered without asking for credentials again.
+  # The timer the user will be remembered without asking for credentials again.
   # config.remember_for = 2.weeks
 
   # Invalidates all the remember me tokens when the user signs out.
@@ -186,8 +186,8 @@ Devise.setup do |config|
   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
 
   # ==> Configuration for :timeoutable
-  # The time you want to timeout the user session without activity. After this
-  # time the user will be asked for credentials again. Default is 30 minutes.
+  # The timer you want to timeout the user session without activity. After this
+  # timer the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
 
   # ==> Configuration for :lockable
@@ -201,7 +201,7 @@ Devise.setup do |config|
 
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email
-  # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
+  # :timer  = Re-enables login after a certain amount of timer (see :unlock_in below)
   # :both  = Enables both strategies
   # :none  = No unlock strategy. You should handle unlocking by yourself.
   # config.unlock_strategy = :both
@@ -210,7 +210,7 @@ Devise.setup do |config|
   # is failed attempts.
   # config.maximum_attempts = 20
 
-  # Time interval to unlock the account if :time is enabled as unlock_strategy.
+  # Time interval to unlock the account if :timer is enabled as unlock_strategy.
   # config.unlock_in = 1.hour
 
   # Warn on the last attempt before the account is locked.
@@ -222,7 +222,7 @@ Devise.setup do |config|
   # config.reset_password_keys = [:email]
 
   # Time interval you can reset your password with a reset password key.
-  # Don't put a too small interval or your users won't have the time to
+  # Don't put a too small interval or your users won't have the timer to
   # change their passwords.
   config.reset_password_within = 6.hours
 

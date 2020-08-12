@@ -13,6 +13,8 @@ ru:
       prompt: "Выберите:"
 
   test_passages:
+    update:
+      timeover: "Время окончено!"
     result:
       header: "Тест %{title} успешно завершен!"
       back_to: "Вернуться к тестам"
@@ -20,6 +22,7 @@ ru:
       header: "Тест: %{title}"
       question: "Вопрос: %{number}"
       next: "Далее"
+      time: "Осталось время >>"
     gist:
       success: "Gist успешно сохранен!"
       failure: "Во время сохранения gist произошла ошибка"
@@ -51,6 +54,7 @@ ru:
         actions: "Действия"
         description: "Описание:"
         badges: "Награды"
+        timer: "Время тестирования, мин."
       new:
         header: "Создать новый тест"
         back: "Назад"
